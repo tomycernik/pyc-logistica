@@ -4,11 +4,6 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>PyC Logistica - Llegamos Siempre</title>
-<meta name="description" content="Servicio premium de logistica y distribucion en CABA. Cotiza tu envio, seguimiento en tiempo real y contacto directo por WhatsApp. Nogoya 4305, Buenos Aires."/>
-<meta property="og:title" content="PyC Logistica - Llegamos Siempre"/>
-<meta property="og:description" content="Servicio premium de logistica y distribucion en CABA. Cotiza tu envio y contactate por WhatsApp."/>
-<meta property="og:url" content="https://pyclogistica.com.ar"/>
-<meta property="og:type" content="website"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
 <style>
@@ -49,7 +44,7 @@ nav.solid{background:rgba(10,10,10,.95);backdrop-filter:blur(20px);border-bottom
 .logo-ring{width:42px;height:42px;border-radius:50%;border:1.5px solid var(--gold);
   display:flex;align-items:center;justify-content:center;background:var(--gg);flex-shrink:0}
 .logo-ring svg{width:20px;height:20px;fill:var(--gold)}
-.logo-name{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;line-height:1}
+.logo-name{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;line-height:1;text-transform:uppercase;letter-spacing:.06em}
 .logo-name span{color:var(--gold)}
 .logo-sub{font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--mut);margin-top:3px}
 .nav-ul{display:flex;list-style:none;gap:36px;align-items:center}
@@ -108,7 +103,7 @@ nav.solid{background:rgba(10,10,10,.95);backdrop-filter:blur(20px);border-bottom
 
 /* HERO */
 #hero{min-height:100vh;padding-top:var(--nav);display:flex;align-items:center;
-  position:relative;overflow:hidden;background:var(--bg)}
+  position:relative;background:var(--bg)}
 .hero-bg{position:absolute;inset:0;pointer-events:none;
   background-image:linear-gradient(90deg,rgba(201,168,76,.04) 1px,transparent 1px),
     linear-gradient(rgba(201,168,76,.04) 1px,transparent 1px);
@@ -121,8 +116,9 @@ nav.solid{background:rgba(10,10,10,.95);backdrop-filter:blur(20px);border-bottom
   pointer-events:none}
 .hero-lay{position:relative;z-index:2;width:100%;
   display:grid;grid-template-columns:1fr 280px;align-items:center;gap:80px}
+.hero-lay>*{min-width:0}
 .hero-h1{font-family:'Cormorant Garamond',serif;
-  font-size:clamp(3.5rem,7vw,6rem);font-weight:600;line-height:.95;margin-bottom:32px}
+  font-size:clamp(3.5rem,7vw,6rem);font-weight:600;line-height:1.15;margin-bottom:32px}
 .hero-h1 em{font-style:italic;color:var(--gold)}
 .hero-p{font-size:1.05rem;color:var(--mut);max-width:500px;line-height:1.8;margin-bottom:52px}
 .hero-btns{display:flex;gap:16px;flex-wrap:wrap}
@@ -228,28 +224,6 @@ textarea.fi{resize:vertical;min-height:130px}
   background:rgba(201,168,76,.07);border:1px solid rgba(201,168,76,.35);
   border-radius:var(--r);color:var(--gold);font-size:.88rem}
 
-/* TRACKING */
-  padding:64px 80px;display:flex;flex-direction:column;align-items:center;
-  text-align:center;max-width:720px}
-.tbtn{background:var(--gold);color:var(--bg);padding:13px 32px;
-  font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;
-  border-radius:var(--r);font-weight:500;border:none;cursor:pointer;white-space:nowrap;
-  transition:all .25s;-webkit-tap-highlight-color:rgba(0,0,0,0);touch-action:manipulation;
-  -webkit-user-select:none;user-select:none;display:inline-flex;align-items:center;justify-content:center}
-.tbtn:hover{background:var(--gold-lt)}
-  border:1px solid var(--bdr);border-radius:var(--r);padding:32px;text-align:left;margin-top:24px}
-  margin-bottom:24px;padding-bottom:16px;border-bottom:1px solid var(--bdr)}
-  border:1px solid rgba(201,168,76,.3);padding:4px 12px;border-radius:20px}
-.tl{list-style:none;position:relative}
-.tl::before{content:'';position:absolute;left:9px;top:0;bottom:0;width:1px;background:var(--bdr)}
-.tl li{padding:0 0 24px 34px;position:relative}
-.tl li::before{content:'';position:absolute;left:3px;top:4px;
-  width:13px;height:13px;border-radius:50%;background:var(--bg);border:2px solid var(--bdr)}
-.tl li.done::before{background:var(--gold);border-color:var(--gold)}
-.tl li.act::before{background:var(--gold);border-color:var(--gold);
-  box-shadow:0 0 10px rgba(201,168,76,.5)}
-.tl-s{font-size:.82rem;font-weight:500;margin-bottom:3px}
-.tl-t{font-size:.72rem;color:var(--mut)}
 
 /* WA CARDS */
 .wa-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:860px}
@@ -396,17 +370,16 @@ footer{background:var(--surf);border-top:1px solid var(--bdr);padding:80px 0 40p
     <div class="hero-lay">
       <div>
         <div class="eyebrow">Llegamos Siempre</div>
-        <h1 class="hero-h1">Logistica que <em>no</em> falla.</h1>
-        <p class="hero-p">Tu mercaderia llega donde tiene que llegar, en tiempo y en forma. Pedinos una cotizacion, segui tu envio cuando quieras y hablanos directo cuando lo necesites.</p>
+        <h1 class="hero-h1"><span style="display:block;margin-bottom:-.1em">Logística</span><span style="display:block">que <em>no</em></span><span style="display:block">falla.</span></h1>
+        <p class="hero-p">Tu mercadería llega donde tiene que llegar, en tiempo y en forma. Pedinos una cotización, seguí tu envío cuando quieras y hablanos directo cuando lo necesites.</p>
         <div class="hero-btns">
           <a href="#solicitar" class="btn-p">Cotizar ahora</a>
-          <a href="#solicitar" class="btn-s" onclick="irTab('seguimiento')">Rastrear envio</a>
         </div>
       </div>
       <div class="stats">
         <div class="stat"><div class="stat-n">98<sup>%</sup></div><div class="stat-l">Entregas en tiempo</div></div>
         <div class="stat"><div class="stat-n">24<sup>h</sup></div><div class="stat-l">Respuesta garantizada</div></div>
-        <div class="stat"><div class="stat-n">+5.000</div><div class="stat-l">Envios realizados</div></div>
+        <div class="stat"><div class="stat-n">+5.000</div><div class="stat-l">Envíos realizados</div></div>
       </div>
     </div>
   </div>
@@ -418,19 +391,19 @@ footer{background:var(--surf);border-top:1px solid var(--bdr);padding:80px 0 40p
     <div class="band-in">
       <div class="band-it">
         <div class="band-ico"><svg viewBox="0 0 24 24"><path d="M1 3h15v13H1zM16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
-        <div class="band-t"><strong>Llegamos a todo el pais</strong><span>Cualquier destino en Argentina</span></div>
+        <div class="band-t"><strong>Llegamos a todo el país</strong><span>Cualquier destino en Argentina</span></div>
       </div>
       <div class="band-it">
         <div class="band-ico"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
-        <div class="band-t"><strong>Sabas donde esta tu envio</strong><span>Seguimiento en cada paso</span></div>
+        <div class="band-t"><strong>Sabés dónde está tu envío</strong><span>Seguimiento en cada paso</span></div>
       </div>
       <div class="band-it">
         <div class="band-ico"><svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg></div>
-        <div class="band-t"><strong>Te respondemos rapido</strong><span>Atencion directa por WhatsApp</span></div>
+        <div class="band-t"><strong>Te respondemos rápido</strong><span>Atención directa por WhatsApp</span></div>
       </div>
       <div class="band-it">
         <div class="band-ico"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></div>
-        <div class="band-t"><strong>El precio antes de arrancar</strong><span>Cotizacion gratis en menos de 2 hs</span></div>
+        <div class="band-t"><strong>El precio antes de arrancar</strong><span>Cotización gratis en menos de 2 hs</span></div>
       </div>
     </div>
   </div>
@@ -442,30 +415,30 @@ footer{background:var(--surf);border-top:1px solid var(--bdr);padding:80px 0 40p
     <div class="srv-intro">
       <div>
         <div class="eyebrow">Lo que hacemos</div>
-        <h2 class="H2">Servicios <em>premium</em><br/>de logistica</h2>
+        <h2 class="H2">Servicios <em>premium</em><br/>de logística</h2>
         <div class="rule"></div>
       </div>
       <div style="padding-bottom:4px">
-        <p>Cada paquete que nos confias lo tratamos como si fuera nuestro. Sin importar si es un envio chico o una distribucion grande, vas a tener la misma atencion de siempre.</p>
+        <p>Cada paquete que nos confiás lo tratamos como si fuera nuestro. Sin importar si es un envío chico o una distribución grande, vas a tener la misma atención de siempre.</p>
       </div>
     </div>
     <div class="srv-grid">
       <div class="srv">
         <div class="srv-n">01</div>
         <div class="srv-ico"><svg viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
-        <div class="srv-ttl">Distribucion</div>
-        <p class="srv-txt">Retiramos y entregamos tu mercaderia donde necesites. Podes seguir cada movimiento desde que sale hasta que llega.</p>
+        <div class="srv-ttl">Distribución</div>
+        <p class="srv-txt">Retiramos y entregamos tu mercadería donde necesités. Podés seguir cada movimiento desde que sale hasta que llega.</p>
       </div>
       <div class="srv">
         <div class="srv-n">02</div>
         <div class="srv-ico"><svg viewBox="0 0 24 24"><path d="M20 7H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/><path d="M16 3H8L6 7h12z"/></svg></div>
         <div class="srv-ttl">Almacenaje</div>
-        <p class="srv-txt">Guardamos tu stock de forma segura y ordenada. Vos decidis cuando mover, nosotros nos encargamos del resto.</p>
+        <p class="srv-txt">Guardamos tu stock de forma segura y ordenada. Vos decidís cuándo mover; nosotros nos encargamos del resto.</p>
       </div>
       <div class="srv">
         <div class="srv-n">03</div>
         <div class="srv-ico"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
-        <div class="srv-ttl">Logistica Integral</div>
+        <div class="srv-ttl">Logística Integral</div>
         <p class="srv-txt">Nos ocupamos de todo: planificamos la ruta, coordinamos el transporte y te avisamos en cada paso del camino.</p>
       </div>
     </div>
@@ -475,19 +448,19 @@ footer{background:var(--surf);border-top:1px solid var(--bdr);padding:80px 0 40p
 <!-- ══ SOLICITAR ══ -->
 <section id="solicitar" class="SEC">
   <div class="C">
-    <div class="eyebrow">Tu solucion</div>
-    <h2 class="H2">Que necesitas hoy?</h2>
+    <div class="eyebrow">Tu solución</div>
+    <h2 class="H2">¿Qué necesitás hoy?</h2>
     <div class="rule"></div>
 
     <div class="tab-nav">
-      <div class="tab-btn on" id="tbtn-cotizacion" onclick="cambiarTab('cotizacion')">Cotizar envio</div>
+      <div class="tab-btn on" id="tbtn-cotizacion" onclick="cambiarTab('cotizacion')">Cotizar envío</div>
       <div class="tab-btn" id="tbtn-whatsapp" onclick="cambiarTab('whatsapp')">Contacto directo</div>
     </div>
 
     <!-- COTIZACION -->
     <div id="tab-cotizacion">
       <div class="form-wrap">
-        <p class="form-intro">Contanos que necesitas y te mandamos el precio en menos de 2 horas. Cuando apretas enviar, nos llega tu mensaje directo al WhatsApp para atenderte rapido.</p>
+        <p class="form-intro">Contanos qué necesitás y te mandamos el precio en menos de 2 horas. Cuando apretás enviar, nos llega tu mensaje directo al WhatsApp para atenderte rápido.</p>
         <div class="fg-grid">
           <div class="fg"><label class="flbl">Nombre y apellido *</label><input type="text" class="fi" id="c-nom" placeholder="Tu nombre completo"/></div>
           <div class="fg"><label class="flbl">Telefono / WhatsApp *</label><input type="tel" class="fi" id="c-tel" placeholder="+54 11 0000-0000"/></div>
@@ -495,11 +468,11 @@ footer{background:var(--surf);border-top:1px solid var(--bdr);padding:80px 0 40p
           <div class="fg">
             <label class="flbl">Tipo de servicio</label>
             <select class="fi" id="c-tipo">
-              <option value="">Selecciona una opcion</option>
-              <option>Envio puerta a puerta</option>
-              <option>Distribucion masiva</option>
+              <option value="">Seleccioná una opción</option>
+              <option>Envío puerta a puerta</option>
+              <option>Distribución masiva</option>
               <option>Almacenaje y stock</option>
-              <option>Logistica integral</option>
+              <option>Logística integral</option>
               <option>Otro</option>
             </select>
           </div>
@@ -507,11 +480,11 @@ footer{background:var(--surf);border-top:1px solid var(--bdr);padding:80px 0 40p
           <div class="fg"><label class="flbl">Destino</label><input type="text" class="fi" id="c-des" placeholder="Ciudad / Localidad de destino"/></div>
           <div class="fg"><label class="flbl">Peso estimado (kg)</label><input type="number" class="fi" id="c-peso" placeholder="0"/></div>
           <div class="fg"><label class="flbl">Volumen estimado (m3)</label><input type="number" class="fi" id="c-vol" placeholder="0.00" step="0.01"/></div>
-          <div class="fg full"><label class="flbl">Descripcion del envio</label><textarea class="fi" id="c-desc" placeholder="Contanos el tipo de mercaderia, si es fragil, urgente, etc."></textarea></div>
+          <div class="fg full"><label class="flbl">Descripción del envío</label><textarea class="fi" id="c-desc" placeholder="Contanos el tipo de mercadería, si es frágil, urgente, etc."></textarea></div>
         </div>
         <div class="form-foot">
           <p class="fnote">Se va a abrir WhatsApp con todos tus datos. Nos llega enseguida y te respondemos a la brevedad.</p>
-          <div class="fsub" onclick="enviarCotizacion()">Solicitar cotizacion</div>
+          <div class="fsub" onclick="enviarCotizacion()">Solicitar cotización</div>
         </div>
         <div class="ok-msg" id="ok-cot">Solicitud enviada. Te contactamos a la brevedad.</div>
       </div>
@@ -519,14 +492,14 @@ footer{background:var(--surf);border-top:1px solid var(--bdr);padding:80px 0 40p
 
     <!-- WHATSAPP -->
     <div id="tab-whatsapp" style="display:none">
-      <p style="color:var(--mut);font-size:.92rem;margin-bottom:40px;max-width:520px;line-height:1.8">Hablanos directo. Cada card abre el chat al instante.</p>
+      <p style="color:var(--mut);font-size:.92rem;margin-bottom:40px;max-width:520px;line-height:1.8">Hablanos directo. Cada opción abre el chat al instante.</p>
       <div class="wa-grid">
         <a href="https://wa.me/5491167965589?text=Hola%20PyC%20Logistica!%20Necesito%20una%20cotizacion" target="_blank" class="wa-card">
           <div class="wa-logo"><svg width="38" height="38"><use href="#wa"/></svg></div>
           <div>
             <div class="wa-lbl">WhatsApp</div>
             <div class="wa-ttl">Cotizaciones y Ventas</div>
-            <p class="wa-dsc">Consulta precios y pedi tu cotizacion. Te respondemos rapido.</p>
+            <p class="wa-dsc">Consultá precios y pedí tu cotización. Te respondemos rápido.</p>
           </div>
           <div class="wa-pill">Abrir chat &rarr;</div>
         </a>
@@ -534,8 +507,8 @@ footer{background:var(--surf);border-top:1px solid var(--bdr);padding:80px 0 40p
           <div class="wa-logo"><svg width="38" height="38"><use href="#wa"/></svg></div>
           <div>
             <div class="wa-lbl">WhatsApp</div>
-            <div class="wa-ttl">Estado de tu Envio</div>
-            <p class="wa-dsc">Mandanos el numero de guia y te contamos donde esta tu paquete al toque.</p>
+            <div class="wa-ttl">Estado de tu Envío</div>
+            <p class="wa-dsc">Mandanos el número de guía y te informamos el estado de tu envío a la brevedad.</p>
           </div>
           <div class="wa-pill">Consultar estado &rarr;</div>
         </a>
@@ -552,7 +525,7 @@ footer{background:var(--surf);border-top:1px solid var(--bdr);padding:80px 0 40p
         <div class="eyebrow">Seguinos</div>
         <h2 class="H2">Estamos en<br/><em>tus redes</em></h2>
         <div class="rule"></div>
-        <p style="color:var(--mut);font-size:.92rem;line-height:1.8;max-width:420px">Seguinos para ver lo que hacemos dia a dia: envios, novedades y lo que dicen los clientes que ya nos eligieron.</p>
+        <p style="color:var(--mut);font-size:.92rem;line-height:1.8;max-width:420px">Seguinos para ver lo que hacemos día a día: envíos, novedades y lo que dicen los clientes que ya nos eligieron.</p>
       </div>
       <div class="redes-r">
         <a href="https://instagram.com/pyclogisticaydistribucion" target="_blank" class="rchip">
@@ -585,9 +558,10 @@ footer{background:var(--surf);border-top:1px solid var(--bdr);padding:80px 0 40p
            style="width:110px;height:110px;border-radius:50%;
                   border:2px solid var(--gold);object-fit:cover;
                   box-shadow:0 0 40px rgba(201,168,76,.4);margin-bottom:8px"/>
-      <div style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,4vw,3rem);
-                  font-weight:600;color:#f0ece3;text-align:center;line-height:1.1">
-        PyC <span style="color:var(--gold)">Logistica</span>
+      <div style="font-family:'Cormorant Garamond',serif;font-weight:600;
+                  font-size:clamp(2.4rem,5vw,3.8rem);line-height:1;text-align:center;
+                  text-transform:uppercase;letter-spacing:.06em">
+        <span style="color:var(--gold)">PyC</span><span style="color:#f0ece3"> Logística</span>
       </div>
       <div style="font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;
                   color:var(--gold);margin-top:-4px">Llegamos Siempre</div>
@@ -623,12 +597,12 @@ footer{background:var(--surf);border-top:1px solid var(--bdr);padding:80px 0 40p
           </div>
           <div><div class="logo-name"><span>PyC</span> Logistica</div><div class="logo-sub">Llegamos Siempre</div></div>
         </div>
-        <p class="foot-about">Nos encargamos de que tu mercaderia llegue a destino de forma segura y rapida, con atencion personalizada en todo momento.</p>
+        <p class="foot-about">Nos encargamos de que tu mercadería llegue a destino de forma segura y rápida, con atención personalizada en todo momento.</p>
       </div>
       <div class="fcol">
         <div class="fcol-ttl">Servicios</div>
-        <a href="#solicitar" onclick="irTab('cotizacion')">Cotizar envio</a>
-        <a href="#servicios">Distribucion</a>
+        <a href="#solicitar" onclick="irTab('cotizacion')">Cotizar envío</a>
+        <a href="#servicios">Distribución</a>
         <a href="#servicios">Almacenaje</a>
       </div>
       <div class="fcol">
@@ -638,7 +612,7 @@ footer{background:var(--surf);border-top:1px solid var(--bdr);padding:80px 0 40p
         <a href="https://instagram.com/pyclogisticaydistribucion" target="_blank">Instagram</a>
       </div>
     </div>
-    <div class="fcopy">&copy; 2025 PyC Logistica y Distribucion &mdash; Todos los derechos reservados</div>
+    <div class="fcopy">&copy; 2025 PyC Logistica y Distribución &mdash; Todos los derechos reservados</div>
   </div>
 </footer>
 
@@ -704,7 +678,7 @@ function enviarCotizacion() {
   var tel  = document.getElementById('c-tel').value.trim();
   var mail = document.getElementById('c-mail').value.trim();
   if (!nom || !tel || !mail) {
-    mostrarToast('Completa nombre, telefono y email');
+    mostrarToast('Completá nombre, teléfono y email');
     return;
   }
   var tipo = document.getElementById('c-tipo').value;
@@ -713,9 +687,9 @@ function enviarCotizacion() {
   var peso = document.getElementById('c-peso').value;
   var vol  = document.getElementById('c-vol').value;
   var desc = document.getElementById('c-desc').value.trim();
-  var txt = 'Nueva solicitud de cotizacion\n\n'
+  var txt = 'Nueva solicitud de cotización\n\n'
     + 'Nombre: ' + nom + '\n'
-    + 'Telefono: ' + tel + '\n'
+    + 'Teléfono: ' + tel + '\n'
     + 'Email: ' + mail + '\n'
     + 'Tipo: ' + (tipo||'-') + '\n'
     + 'Origen: ' + (ori||'-') + '\n'
@@ -725,7 +699,7 @@ function enviarCotizacion() {
     + 'Detalle: ' + (desc||'-');
   window.open('https://wa.me/5491167965589?text=' + encodeURIComponent(txt), '_blank');
   document.getElementById('ok-cot').style.display = 'block';
-  mostrarToast('Solicitud enviada!');
+  mostrarToast('¡Solicitud enviada!');
 }
 
 
