@@ -15,9 +15,9 @@
   --grn:#25d366;--nav:72px;--r:6px;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;background:var(--bg)}
+html{scroll-behavior:smooth;background:var(--bg);overflow-x:hidden;width:100%;max-width:100%}
 body{background:var(--bg);color:var(--txt);font-family:'DM Sans',sans-serif;
-  font-weight:300;line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+  font-weight:300;line-height:1.65;overflow-x:hidden;width:100%;max-width:100%;-webkit-font-smoothing:antialiased}
 a{color:inherit;text-decoration:none}
 button{cursor:pointer;border:none;background:none;font-family:inherit;color:inherit}
 input,select,textarea{font-family:inherit;font-size:16px;-webkit-appearance:none}
@@ -98,7 +98,7 @@ nav.solid{background:rgba(10,10,10,.95);backdrop-filter:blur(20px);border-bottom
 #mm a:first-of-type{border-top:1px solid rgba(201,168,76,.1)}
 #mm a:active{color:var(--gold)}
 
-#hero{min-height:100vh;padding-top:var(--nav);display:flex;align-items:center;
+#hero{min-height:100vh;padding-top:var(--nav);display:flex;align-items:center;overflow:hidden;
   position:relative;background:var(--bg)}
 .hero-bg{position:absolute;inset:0;pointer-events:none;
   background-image:linear-gradient(90deg,rgba(201,168,76,.04) 1px,transparent 1px),
@@ -294,6 +294,7 @@ footer{background:var(--surf);border-top:1px solid var(--bdr);padding:80px 0 40p
   :root{--nav:64px}
   .C{padding:0 20px}
   .SEC{padding:72px 0}
+  .hero-glow{width:130vw;max-width:520px}
   .hero-h1{font-size:clamp(2.4rem,8vw,3.5rem)}
   .srv-grid{grid-template-columns:1fr}
   .srv{border-right:none;border-bottom:1px solid var(--bdr)}
